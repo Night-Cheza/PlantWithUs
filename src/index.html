@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewpoint" content = "width = device-width, initial-scale = 1.0">
+        <link rel="stylesheet" type = "text/css" href = "style.css"> 
+        <script src = "script.js"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@400;500;600;700&display=swap');
+        </style>  
+
+        <title>PlantWithUs</title>
+    </head>
+
+    <body>
+        <header>
+            <div>
+                <h1>
+                    Plant With Us
+                </h1>
+            </div>
+
+            <div>
+                <h4>
+                    Contact us: <br>
+                </h4>
+                <p>
+                    123-123-1122 <br>
+                    abc@acbd.com
+                </p>
+            </div>
+        </header>
+
+        <div id = "forms">
+            <form>
+                <div>
+                    <h3>
+                        Place Order Online
+                    </h3>
+                </div>
+
+                <table id = "custDetails">
+                    <tr>
+                        <th>
+                            First name
+                        </th>
+                        <td>
+                            <input type = "text"  id = "fName" pattern="[A-Za-z]{1,30}" required autofocus>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            Last name
+                        </th>
+                        <td>
+                            <input type = "text"  id = "lName" pattern="[A-Za-z]{1,30}" required>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            Address
+                        </th>
+                        <td>
+                            <input type = "text" id = "address" required>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            Postal Code
+                        </th>
+                        <td>
+                            <input type = "text" id = "pCode" pattern = "[A-Za-z][0-9][A-Za-z][0-9][A-Za-z][0-9]" placeholder = "A0A0A0" required> 
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            Phone number
+                        </th>
+                        <td>
+                            <input type = "tel" id = "phone" pattern = "[0-9]{3}[0-9]{3}[0-9]{4}" placeholder = "###-###-####" required>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            E-mail
+                        </th>
+                        <td>
+                            <input type = "email" id = "email" required>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
+            <div>
+                <h3>
+                    Shape of planter
+                </h3>
+            </div>
+
+            <form id = "pictures">
+                <table>
+                    <tr>
+                        <td> <!--source of img:https://media.istockphoto.com/photos/small-potted-plant-aloe-vera-picture-id837336120?k=20&m=837336120&s=612x612&w=0&h=r0PATUpcdE00bdSeo6bTlrfeLFRcYFEkjMEVoy68kTU=-->
+                            <img src="img/cubes.jpg" alt = "Square cubes planter" onclick = "getCubes(); return false" id = "cubes"> <br>
+                            <p>Square/Rectangular Cubes</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td> <!--source of img: https://cdn.shopify.com/s/files/1/0020/5478/3028/products/mushroomcylinderwhitecylinder_1200x1200.jpg?v=1629599021-->
+                            <img src="img/cylinders.jpg" alt = "Flat bottomed planter" onclick = "getCylinders(); return false" id = "cylinders"> <br>
+                            <p>Flat bottomed Cylinder</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <table>
+                    <tr>
+                        <td> <!--source of img: https://cb.scene7.com/is/image/Crate/SphereWhitePlantersFHS20/$web_pdp_main_carousel_zoom_med$/191218162311/sphere-white-planters.jpg-->
+                            <img src="img/spherical.jpg" alt = "1/2 Spherical planter" onclick = "getSpherical(); return false" id = "spherical"> <br>
+                            <p>1/2 Spherical</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td> <!--source of img: https://images.thdstatic.com/productImages/068bd59b-572f-5e4f-b4f9-e4611b8037fc/svn/grey-litton-lane-plant-pots-46545-64_1000.jpg-->
+                            <img src="img/cones.jpg" alt = "Truncated cone planter" onclick = "getCones(); return false" id = "cones"> <br>
+                            <p>Truncated Cone</p>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <div id = "display"></div>
+        </div>
+    </body>
+</html>
